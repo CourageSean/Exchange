@@ -1,0 +1,402 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Della+Respira&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&display=swap");
+* {
+  box-sizing: border-box;
+  /* font-family: "Cormorant", serif; */
+  letter-spacing: 2px;
+}
+#logo {
+  margin-top: 20px;
+  width: 100px;
+  margin-left: 30px;
+}
+#logo img {
+  width: 150%;
+}
+.fa-bars {
+  display: inline-block;
+  color: #fff;
+  font-size: 40px;
+  margin-top: 25px;
+  margin-left: 25px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+header {
+  font-weight: 400;
+  border-radius: 20px;
+  color: #dfdfe2;
+  width: 250px;
+  height: 87vh;
+  position: fixed;
+  left: 2vh;
+  top: 8vh;
+  background: linear-gradient(
+    0deg,
+    rgba(186, 84, 245, 1) 0%,
+    rgba(225, 78, 202, 1) 99%
+  );
+}
+header ul {
+  list-style: none;
+}
+header ul li {
+  margin-top: 50px;
+}
+header ul li a {
+  text-decoration: none;
+  color: #dfdfe2;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 1s;
+  font-size: 18px;
+}
+header ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+header ul li img {
+  width: 17px;
+}
+
+#stock_div {
+  padding-left: 20%;
+  background-color: #1e1e2f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#stock form {
+  margin-top: 50px;
+}
+#stock .my-para {
+  text-align: center;
+  color: #dfdfe2;
+}
+#stock #dropdown {
+  width: 200px;
+  height: 40px;
+  background-color: #27293d;
+  border-radius: 10px;
+  border: 1px solid #dfdfe2;
+  color: #dfdfe2;
+  font-size: 18px;
+  padding: 5px;
+}
+#stock #dropdown option {
+  text-align: center;
+}
+#selected-result {
+  margin-top: 20px;
+  color: #dfdfe2;
+  font-size: 24px;
+}
+
+#title-stock {
+  margin-top: 50px;
+  color: #dfdfe2;
+  font-size: 40px;
+}
+#stock #plot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  padding: 30px;
+}
+
+#forex {
+  background: #1e1e2f;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+#forex .container {
+  padding-left: 15%;
+  padding-top: 13vh;
+  width: 50vw;
+  margin: 0 auto;
+}
+#forex .header {
+  text-align: center;
+  color: #dfdfe2;
+}
+#forex .title {
+  font-family: "Anton", sans-serif;
+  font-size: 2em;
+}
+#forex .para {
+  font-family: "Della Respira", serif;
+}
+#forex .betrag {
+  display: flex;
+  justify-content: space-evenly;
+}
+#forex .main {
+  padding-top: 10%;
+}
+#forex .ergebnis {
+  text-align: center;
+  color: #dfdfe2;
+  font-family: "Della Respira", serif;
+}
+#forex .date {
+  padding-top: 10%;
+  font-size: 1em;
+  font-family: "Della Respira", serif;
+  letter-spacing: 3px;
+  word-spacing: 3px;
+}
+#forex #currency1 {
+  border-radius: 10px;
+  border: #0b486b 1px solid;
+  font-family: "Della Respira", serif;
+}
+#forex #input-button {
+  border-radius: 15px;
+  padding: 2% 6%;
+  border: #0b486b 1px solid;
+  background: #27293d;
+  color: #dfdfe2;
+  margin-top: 4vh;
+  font-family: "Della Respira", serif;
+}
+#forex .result {
+  margin-top: 5%;
+  font-size: 2em;
+  color: #dfdfe2;
+  font-family: "Anton", sans-serif;
+}
+#forex .betrag select {
+  background: #27293d;
+  color: #dfdfe2;
+  padding: 2% 3%;
+  border: none;
+  font-size: 1em;
+  box-shadow: 0 5px 48px #1e1e2f;
+  -webkit-appearance: button;
+  outline: none;
+}
+#forex .betrag:hover:before {
+  background: #1e1e2f;
+}
+#forex #button {
+  margin-top: 4vh;
+  border-radius: 15px;
+  padding: 1% 4%;
+  border: #08324b 1px solid;
+  background: #27293d;
+  color: #dfdfe2;
+  font-family: "Della Respira", serif;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+  transition: 0.2s transform ease-in-out;
+  will-change: transform;
+  z-index: 0;
+}
+#forex #button::after {
+  border-radius: 3rem;
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(-100%, 0) rotate(10deg);
+  transform-origin: top left;
+  transition: 0.2s transform ease-out;
+  will-change: transform;
+  z-index: -1;
+  font-size: 4rem;
+  padding: 10px;
+}
+#forex #button:hover::after {
+  transform: translate(0, 0);
+}
+#forex #button:hover {
+  border: 2px solid #dfdfe2;
+  color: #dfdfe2;
+  transform: scale(1.05);
+  will-change: transform;
+}
+
+#crypto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 15% 15%;
+  background-color: #1e1e2e;
+}
+#buttons {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+#buttons button {
+  border: none;
+  background-color: #0b486b;
+  color: #dfdfe2;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+#crypto > div {
+  text-align: right;
+  color: #dfdfe2;
+  margin-bottom: 80px;
+  margin-top: 20px;
+}
+#crypto > div p {
+  margin-left: auto;
+  width: 80%;
+  text-align: right;
+}
+
+#crypto form,
+#stock form {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 1s;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-sizing: border-box;
+  border-radius: 25px;
+  border: 4px solid white;
+  padding: 5px;
+}
+
+#crypto form input,
+#stock form input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42.5px;
+  line-height: 30px;
+  outline: 0;
+  border: 0;
+  display: none;
+  font-size: 1em;
+  border-radius: 20px;
+  padding: 0 20px;
+}
+
+#crypto .fa,
+#stock .fa {
+  box-sizing: border-box;
+  padding: 10px;
+  width: 42.5px;
+  height: 42.5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  color: #07051a;
+  text-align: center;
+  font-size: 1.2em;
+  transition: all 1s;
+}
+
+#crypto form:hover,
+#stock form:hover {
+  width: 200px;
+  cursor: pointer;
+}
+
+#crypto form:hover input,
+#stock form:hover input {
+  display: block;
+}
+
+#crypto form:hover .fa,
+#stock form:hover .fa {
+  background: #07051a;
+  color: white;
+}
+#crypto article {
+  flex: 1 0 60%;
+}
+
+#news .container {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+#news h1 {
+  color: #dfdfe2;
+  text-align: right;
+  padding-left: 85px;
+  padding-top: 10px;
+  font-size: 32px;
+}
+#news .card {
+  width: 250px;
+  height: 300px;
+  margin: 40px;
+  background-color: #dfdfe2;
+  border-radius: 20px;
+  color: #dfdfe2;
+}
+#news .card-container {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+#news .card-container a {
+  text-decoration: none;
+  color: #dfdfe2;
+  background-color: #0b486b;
+  padding: 10px 20px;
+  border-radius: 5px;
+  /* background-color: #dfdfe2; */
+}
+#news img {
+  width: 100%;
+  height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+@media (max-width: 1000px) {
+  header {
+    opacity: 0;
+    transition: all 0.5s;
+  }
+  .fa-bars {
+    opacity: 1;
+  }
+  #forex .container {
+    padding-left: 0;
+  }
+  #stock_div {
+    padding-left: 0;
+  }
+  #crypto {
+    padding: 0 5% 5%;
+  }
+
+  #crypto > div {
+    text-align: center;
+  }
+
+  #crypto > div p {
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  #buttons {
+    justify-content: space-between;
+  }
+  #buttons button {
+    flex: 1 0 40%;
+  }
+}
